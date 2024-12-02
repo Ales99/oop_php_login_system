@@ -11,7 +11,7 @@ class Login extends Dbh{
 
         if($stmt->rowCount() == 0){
             $stmt=null;
-            header("Location: ../index.php?error=Usernotfouns");
+            header("Location: ../index.php?error=Usernotfound");
             exit();
         }
         $hashedPass = $stmt->fetch(PDO::FETCH_ASSOC);
